@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
-import { cn } from '@/lib/utils'; // Uses the helper we made earlier
+import { cn } from '@/lib/utils';
 
 export default function SignupForm() {
   const router = useRouter();
@@ -24,7 +24,6 @@ export default function SignupForm() {
     setError('');
 
     try {
-      // 1. Create User in Firebase
       const userCredential = await createUserWithEmailAndPassword(
         auth, 
         formData.email, 
@@ -32,7 +31,6 @@ export default function SignupForm() {
       );
       const user = userCredential.user;
 
-      // 2. Sync with MongoDB
       const res = await fetch('/api/auth/sync', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -44,17 +42,14 @@ export default function SignupForm() {
         }),
       });
 
-      if (!res.ok) throw new Error('Failed to sync user to database');
-
-      // 3. Redirect to Onboarding or Dashboard
+      if (!res.ok) throw new Error('Failed to sync user data');
       router.push('/dashboard/home');
 
     } catch (err: any) {
       console.error(err);
-      // Firebase error codes are messy (e.g. "auth/email-already-in-use"), so we clean them up
       const msg = err.code === 'auth/email-already-in-use' 
-        ? 'Email already in use' 
-        : err.message || 'Something went wrong';
+        ? 'That email is already in use.' 
+        : err.message || 'Something went wrong.';
       setError(msg);
     } finally {
       setLoading(false);
@@ -62,51 +57,63 @@ export default function SignupForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 w-full max-w-md">
-      {error && <div className="p-3 bg-red-100 text-red-600 rounded text-sm">{error}</div>}
+    <form onSubmit={handleSubmit} className="space-y-4">
+      {error && (
+        <div className="p-3 bg-red-50 text-red-600 text-sm rounded-md border border-red-100">
+          {error}
+        </div>
+      )}
       
       <div className="grid grid-cols-2 gap-4">
+        <div className="space-y-2">
+          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">First Name</label>
+          <input
+            type="text"
+            required
+            className="w-full p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+            onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+          />
+        </div>
+        <div className="space-y-2">
+          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Last Name</label>
+          <input
+            type="text"
+            required
+            className="w-full p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+            onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+          />
+        </div>
+      </div>
+
+      <div className="space-y-2">
+        <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Email</label>
         <input
-          type="text"
-          placeholder="First Name"
+          type="email"
           required
-          className="p-3 border border-zinc-200 dark:border-zinc-800 rounded bg-transparent w-full"
-          onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-        />
-        <input
-          type="text"
-          placeholder="Last Name"
-          required
-          className="p-3 border border-zinc-200 dark:border-zinc-800 rounded bg-transparent w-full"
-          onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+          className="w-full p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
         />
       </div>
 
-      <input
-        type="email"
-        placeholder="Email"
-        required
-        className="w-full p-3 border border-zinc-200 dark:border-zinc-800 rounded bg-transparent"
-        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-      />
-
-      <input
-        type="password"
-        placeholder="Password"
-        required
-        className="w-full p-3 border border-zinc-200 dark:border-zinc-800 rounded bg-transparent"
-        onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-      />
+      <div className="space-y-2">
+        <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Password</label>
+        <input
+          type="password"
+          required
+          className="w-full p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+          onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+        />
+      </div>
 
       <button
         type="submit"
         disabled={loading}
         className={cn(
-          "w-full py-3 bg-blue-600 text-white rounded font-medium hover:bg-blue-700 transition",
+          "w-full py-3.5 bg-black text-white dark:bg-white dark:text-black rounded-lg font-semibold hover:opacity-90 transition-opacity mt-2",
           loading && "opacity-50 cursor-not-allowed"
         )}
       >
-        {loading ? 'Creating Account...' : 'Sign Up'}
+        {loading ? 'Creating account...' : 'Create Account'}
       </button>
     </form>
   );
