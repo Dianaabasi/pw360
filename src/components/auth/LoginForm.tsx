@@ -4,13 +4,14 @@ import { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
-import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export default function LoginForm() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -29,47 +30,127 @@ export default function LoginForm() {
     }
   };
 
+  const inputStyle: React.CSSProperties = {
+    width: '100%',
+    padding: '1rem 1.5rem',
+    borderRadius: '0.75rem',
+    border: '1px solid #bfdbfe',
+    backgroundColor: 'white',
+    color: '#374151',
+    fontSize: '1rem',
+    fontWeight: 500,
+    outline: 'none',
+    transition: 'all 0.2s'
+  };
+
+  const labelStyle: React.CSSProperties = {
+    display: 'block',
+    color: '#38007F',
+    fontWeight: 600,
+    fontSize: '0.875rem',
+    marginBottom: '0.5rem',
+    textAlign: 'left'
+  };
+
   return (
-    <form onSubmit={handleLogin} className="space-y-4">
+    <form onSubmit={handleLogin} style={{ width: '100%', maxWidth: '400px' }}>
       {error && (
-        <div className="p-3 bg-red-50 text-red-600 text-sm rounded-md border border-red-100">
+        <div
+          style={{
+            padding: '0.75rem',
+            backgroundColor: '#fef2f2',
+            color: '#dc2626',
+            fontSize: '0.875rem',
+            borderRadius: '0.5rem',
+            border: '1px solid #fecaca',
+            marginBottom: '1.5rem',
+            textAlign: 'center'
+          }}
+        >
           {error}
         </div>
       )}
-      
-      <div className="space-y-2">
-        <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Email</label>
+
+      <div style={{ marginBottom: '1.5rem' }}>
+        <label style={labelStyle}>Email</label>
         <input
           type="email"
           required
-          className="w-full p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+          placeholder="Enter Email..."
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
+          style={inputStyle}
         />
       </div>
 
-      <div className="space-y-2">
-        <div className="flex justify-between items-center">
-          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Password</label>
-          <a href="/forgot-password" className="text-xs text-blue-600 hover:underline">Forgot?</a>
-        </div>
+      <div style={{ marginBottom: '2rem' }}>
+        <label style={labelStyle}>Password</label>
         <input
           type="password"
           required
-          className="w-full p-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+          placeholder="Enter Passsword..."
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
+          style={inputStyle}
         />
       </div>
 
       <button
         type="submit"
         disabled={loading}
-        className={cn(
-          "w-full py-3.5 bg-black text-white dark:bg-white dark:text-black rounded-lg font-semibold hover:opacity-90 transition-opacity mt-2",
-          loading && "opacity-50 cursor-not-allowed"
-        )}
+        style={{
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '0.75rem',
+          background: 'linear-gradient(to right, #0ea5e9, #2563eb)',
+          color: 'white',
+          fontWeight: 600,
+          padding: '1rem 1.5rem',
+          borderRadius: '0.75rem',
+          border: 'none',
+          cursor: loading ? 'not-allowed' : 'pointer',
+          opacity: loading ? 0.7 : 1,
+          fontSize: '1rem',
+          transition: 'all 0.2s',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+        }}
       >
-        {loading ? 'Logging in...' : 'Sign In'}
+        <ArrowRight style={{ width: '1.25rem', height: '1.25rem' }} />
+        <span>{loading ? 'Logging in...' : 'Continue Login'}</span>
+        <ArrowRight style={{ width: '1.25rem', height: '1.25rem' }} />
       </button>
+
+      <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+        <p style={{ color: '#38007F', fontSize: '0.875rem' }}>
+          Not Yet Part Of PW30?{' '}
+          <Link
+            href="/signup"
+            style={{
+              color: '#FFC500',
+              fontWeight: 600,
+              textDecoration: 'none'
+            }}
+          >
+            Sign Up
+          </Link>
+        </p>
+      </div>
+
+      <div style={{ marginTop: '1rem', textAlign: 'center' }}>
+        <Link
+          href="/forgot-password"
+          style={{
+            color: '#38007F',
+            fontSize: '0.875rem',
+            fontWeight: 500,
+            textDecoration: 'none'
+          }}
+        >
+          Forgot Password??
+        </Link>
+      </div>
     </form>
   );
 }

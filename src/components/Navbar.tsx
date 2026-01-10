@@ -51,7 +51,7 @@ export default function Navbar() {
                 className="desktop-nav"
             >
                 <Link
-                    href="/join"
+                    href="/login"
                     style={{
                         backgroundColor: 'white',
                         color: '#2563eb',

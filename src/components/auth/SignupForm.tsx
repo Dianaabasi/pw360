@@ -78,7 +78,7 @@ export default function SignupForm() {
 
   const labelStyle: React.CSSProperties = {
     display: 'block',
-    color: '#4B0082',
+    color: '#38007F',
     fontWeight: 700,
     fontSize: '0.875rem',
     marginBottom: '0.5rem'
