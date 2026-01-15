@@ -290,7 +290,7 @@ export default function SignupForm() {
             style={{
               width: '100%',
               maxWidth: '320px',
-              background: 'linear-gradient(to right, #4CA1FF, #2D79FF)',
+              background: 'linear-gradient(to right, #017CF4, #017CF4)',
               color: 'white',
               fontWeight: 700,
               padding: '1rem',

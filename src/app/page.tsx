@@ -109,7 +109,7 @@ export default function LandingPage() {
           <h2 style={{
             fontSize: '2.5rem',
             fontWeight: 'bold',
-            color: '#2D79FF',
+            color: '#017CF4',
             marginBottom: '24px',
             letterSpacing: '-0.02em'
           }}>
@@ -138,7 +138,7 @@ export default function LandingPage() {
             flexWrap: 'wrap'
           }}>
             <a href="/login" style={{
-              backgroundColor: '#2D79FF',
+              backgroundColor: '#017CF4',
               color: 'white',
               fontWeight: '600',
               padding: '16px 40px',
@@ -186,7 +186,7 @@ export default function LandingPage() {
           paddingTop: '40px'
         }}>
           <div style={{
-            backgroundColor: '#2D79FF',
+            backgroundColor: '#017CF4',
             borderRadius: '16px',
             padding: '24px 48px',
             boxShadow: '0 8px 24px rgba(45, 121, 255, 0.3)'
@@ -251,7 +251,7 @@ export default function LandingPage() {
               <h3 style={{
                 fontSize: '1.5rem',
                 fontWeight: 'bold',
-                color: '#2D79FF',
+                color: '#017CF4',
                 marginBottom: '16px'
               }}>
                 Learn At Your Own Pace
@@ -266,7 +266,7 @@ export default function LandingPage() {
                 Learn Anytime, Anywhere With Full Control Over Your Learning Speed; No Fixed Schedules, No Pressure.
               </p>
               <a href="/signup" style={{
-                backgroundColor: '#2D79FF',
+                backgroundColor: '#017CF4',
                 color: 'white',
                 fontWeight: '600',
                 padding: '12px 28px',
@@ -490,7 +490,7 @@ export default function LandingPage() {
               <h2 style={{
                 fontSize: '1.75rem',
                 fontWeight: 'bold',
-                color: '#2D79FF',
+                color: '#017CF4',
                 marginBottom: '16px',
                 lineHeight: '1.3'
               }}>
@@ -507,7 +507,7 @@ export default function LandingPage() {
                 In The Decentralized World, Your Value Is Your Versatility. We've Removed The Paywalls So You Can Follow Your Curiosity. One Subscription, Zero Limits—Learn Every Skill You Need To Win In Web3.
               </p>
               <a href="/signup" style={{
-                backgroundColor: '#2D79FF',
+                backgroundColor: '#017CF4',
                 color: 'white',
                 fontWeight: '600',
                 padding: '14px 36px',
@@ -560,7 +560,7 @@ export default function LandingPage() {
             <h2 style={{
               fontSize: '2rem',
               fontWeight: 'bold',
-              color: '#2D79FF',
+              color: '#017CF4',
               marginBottom: '16px'
             }}>
               Why Choose Us! Your Path To Web3 Mastery
@@ -575,7 +575,7 @@ export default function LandingPage() {
               At PW360, We Believe That Success In The Rapidly Evolving Web3 Space Demands More Than Just A Single Skill – It Requires Versatility, Continuous Growth, And A Supportive Ecosystem. We've Built A Learning Platform That Empowers You To Truly Thrive.
             </p>
             <a href="/signup" style={{
-              backgroundColor: '#2D79FF',
+              backgroundColor: '#017CF4',
               color: 'white',
               fontWeight: '600',
               padding: '14px 36px',
@@ -614,7 +614,7 @@ export default function LandingPage() {
                   overflow: 'hidden'
                 }}>
                   {/* Decorative Circles - Slide 1: Blue top-left, Yellow+Purple bottom-left, Large Yellow right */}
-                  <div className="slider-circle-sm" style={{ position: 'absolute', top: '-40px', left: '-40px', width: '100px', height: '100px', backgroundColor: '#3B82F6', borderRadius: '50%' }} />
+                  <div className="slider-circle-sm" style={{ position: 'absolute', top: '-40px', left: '-40px', width: '100px', height: '100px', backgroundColor: '#017CF4', borderRadius: '50%' }} />
                   <div className="slider-circle-md" style={{ position: 'absolute', bottom: '-120px', left: '-100px', width: '300px', height: '300px', backgroundColor: '#FBBF24', borderRadius: '50%' }} />
                   <div className="slider-circle-sm" style={{ position: 'absolute', bottom: '-60px', left: '80px', width: '140px', height: '140px', backgroundColor: '#7C3AED', borderRadius: '50%' }} />
                   <div className="slider-circle-lg" style={{ position: 'absolute', top: '-150px', right: '-180px', width: '500px', height: '500px', backgroundColor: '#FBBF24', borderRadius: '50%' }} />
@@ -625,7 +625,7 @@ export default function LandingPage() {
                     <h3 style={{
                       fontSize: '1.75rem',
                       fontWeight: 'bold',
-                      color: '#2D79FF',
+                      color: '#017CF4',
                       marginBottom: '16px',
                       lineHeight: '1.3'
                     }}>
@@ -654,9 +654,9 @@ export default function LandingPage() {
                 }}>
                   {/* Decorative Circles - Slide 2: Yellow top-left, Blue+Purple bottom-left, Large Blue right */}
                   <div className="slider-circle-sm" style={{ position: 'absolute', top: '-40px', left: '-40px', width: '100px', height: '100px', backgroundColor: '#FBBF24', borderRadius: '50%' }} />
-                  <div className="slider-circle-md" style={{ position: 'absolute', bottom: '-120px', left: '-100px', width: '300px', height: '300px', backgroundColor: '#3B82F6', borderRadius: '50%' }} />
+                  <div className="slider-circle-md" style={{ position: 'absolute', bottom: '-120px', left: '-100px', width: '300px', height: '300px', backgroundColor: '#017CF4', borderRadius: '50%' }} />
                   <div className="slider-circle-sm" style={{ position: 'absolute', bottom: '-60px', left: '80px', width: '140px', height: '140px', backgroundColor: '#7C3AED', borderRadius: '50%' }} />
-                  <div className="slider-circle-lg" style={{ position: 'absolute', top: '-150px', right: '-180px', width: '500px', height: '500px', backgroundColor: '#3B82F6', borderRadius: '50%' }} />
+                  <div className="slider-circle-lg" style={{ position: 'absolute', top: '-150px', right: '-180px', width: '500px', height: '500px', backgroundColor: '#017CF4', borderRadius: '50%' }} />
                   
                   
                   {/* Content */}
@@ -664,7 +664,7 @@ export default function LandingPage() {
                     <h3 style={{
                       fontSize: '1.75rem',
                       fontWeight: 'bold',
-                      color: '#2D79FF',
+                      color: '#017CF4',
                       marginBottom: '16px',
                       lineHeight: '1.3'
                     }}>
@@ -703,7 +703,7 @@ export default function LandingPage() {
                     <h3 style={{
                       fontSize: '1.75rem',
                       fontWeight: 'bold',
-                      color: '#2D79FF',
+                      color: '#017CF4',
                       marginBottom: '16px',
                       lineHeight: '1.3'
                     }}>
@@ -731,7 +731,7 @@ export default function LandingPage() {
                   overflow: 'hidden'
                 }}>
                   {/* Decorative Circles - Slide 4: Blue top-left, Purple+Yellow bottom-left, Large Purple right */}
-                  <div className="slider-circle-sm" style={{ position: 'absolute', top: '-40px', left: '-40px', width: '100px', height: '100px', backgroundColor: '#3B82F6', borderRadius: '50%' }} />
+                  <div className="slider-circle-sm" style={{ position: 'absolute', top: '-40px', left: '-40px', width: '100px', height: '100px', backgroundColor: '#017CF4', borderRadius: '50%' }} />
                   <div className="slider-circle-md" style={{ position: 'absolute', bottom: '-120px', left: '-100px', width: '300px', height: '300px', backgroundColor: '#7C3AED', borderRadius: '50%' }} />
                   <div className="slider-circle-sm" style={{ position: 'absolute', bottom: '-60px', left: '80px', width: '140px', height: '140px', backgroundColor: '#FBBF24', borderRadius: '50%' }} />
                   <div className="slider-circle-lg" style={{ position: 'absolute', top: '-150px', right: '-180px', width: '500px', height: '500px', backgroundColor: '#7C3AED', borderRadius: '50%' }} />
@@ -742,7 +742,7 @@ export default function LandingPage() {
                     <h3 style={{
                       fontSize: '1.75rem',
                       fontWeight: 'bold',
-                      color: '#2D79FF',
+                      color: '#017CF4',
                       marginBottom: '16px',
                       lineHeight: '1.3'
                     }}>
@@ -771,9 +771,9 @@ export default function LandingPage() {
                 }}>
                   {/* Decorative Circles - Slide 5: Yellow top-left, Blue+Purple bottom-left, Large Blue right */}
                   <div className="slider-circle-sm" style={{ position: 'absolute', top: '-40px', left: '-40px', width: '100px', height: '100px', backgroundColor: '#FBBF24', borderRadius: '50%' }} />
-                  <div className="slider-circle-md" style={{ position: 'absolute', bottom: '-120px', left: '-100px', width: '300px', height: '300px', backgroundColor: '#3B82F6', borderRadius: '50%' }} />
+                  <div className="slider-circle-md" style={{ position: 'absolute', bottom: '-120px', left: '-100px', width: '300px', height: '300px', backgroundColor: '#017CF4', borderRadius: '50%' }} />
                   <div className="slider-circle-sm" style={{ position: 'absolute', bottom: '-60px', left: '80px', width: '140px', height: '140px', backgroundColor: '#7C3AED', borderRadius: '50%' }} />
-                  <div className="slider-circle-lg" style={{ position: 'absolute', top: '-150px', right: '-180px', width: '500px', height: '500px', backgroundColor: '#3B82F6', borderRadius: '50%' }} />
+                  <div className="slider-circle-lg" style={{ position: 'absolute', top: '-150px', right: '-180px', width: '500px', height: '500px', backgroundColor: '#017CF4', borderRadius: '50%' }} />
                 
                   
                   {/* Content */}
@@ -781,7 +781,7 @@ export default function LandingPage() {
                     <h3 style={{
                       fontSize: '1.75rem',
                       fontWeight: 'bold',
-                      color: '#2D79FF',
+                      color: '#017CF4',
                       marginBottom: '16px',
                       lineHeight: '1.3'
                     }}>
@@ -817,7 +817,7 @@ export default function LandingPage() {
               justifyContent: 'center',
               zIndex: 20,
               fontSize: '1.1rem',
-              color: '#2D79FF',
+              color: '#017CF4',
               transition: 'all 0.2s'
             }}
             onMouseOver={(e) => {
@@ -846,7 +846,7 @@ export default function LandingPage() {
               justifyContent: 'center',
               zIndex: 20,
               fontSize: '1.1rem',
-              color: '#2D79FF',
+              color: '#017CF4',
               transition: 'all 0.2s'
             }}
             onMouseOver={(e) => {
@@ -951,7 +951,7 @@ export default function LandingPage() {
               <h3 style={{
                 fontSize: '1.5rem',
                 fontWeight: 'bold',
-                color: '#2D79FF',
+                color: '#017CF4',
                 marginBottom: '16px',
                 lineHeight: '1.3'
               }}>
@@ -1043,7 +1043,7 @@ export default function LandingPage() {
 
             {/* Bottom Right - Blue Card (Danny A.) */}
             <div style={{
-              background: 'linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%)',
+              background: 'linear-gradient(135deg, #017CF4 0%, #017CF4 100%)',
               borderRadius: '24px',
               padding: '32px',
               color: 'white',
@@ -1164,13 +1164,13 @@ export default function LandingPage() {
                   <span style={{
                     fontSize: '1.125rem',
                     fontWeight: '600',
-                    color: faq.isOpen ? '#2D79FF' : '#38007F',
+                    color: faq.isOpen ? '#017CF4' : '#38007F',
                     paddingRight: '16px'
                   }}>
                     {faq.question}
                   </span>
                   {faq.isOpen ? (
-                    <Minus style={{ color: '#2D79FF', width: '20px', height: '20px', flexShrink: 0 }} />
+                    <Minus style={{ color: '#017CF4', width: '20px', height: '20px', flexShrink: 0 }} />
                   ) : (
                     <Plus style={{ color: '#38007F', width: '20px', height: '20px', flexShrink: 0 }} />
                   )}

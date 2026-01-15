@@ -252,7 +252,7 @@ export default function Footer() {
                 }}
               />
               <button style={{
-                backgroundColor: '#3B82F6',
+                backgroundColor: '#017CF4',
                 color: 'white',
                 border: 'none',
                 borderRadius: '8px',
