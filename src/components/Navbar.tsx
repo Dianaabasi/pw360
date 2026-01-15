@@ -27,7 +27,7 @@ export default function Navbar() {
             <div style={{ display: 'flex', alignItems: 'center' }}>
                 <Link href="/">
                     <Image
-                        src="/assets/logo.png"
+                        src="/assets/logo.svg"
                         alt="Profunda Logo"
                         width={120}
                         height={40}

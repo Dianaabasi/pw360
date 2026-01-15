@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
@@ -45,7 +46,7 @@ export default function SignupForm() {
           email: user.email,
           firstName: formData.firstName,
           lastName: formData.lastName,
-          // phone: phoneNumber,
+          phone: phoneNumber,
         }),
       });
 
@@ -304,6 +305,23 @@ export default function SignupForm() {
           >
             {loading ? 'Creating Account...' : 'Continue Registration'}
           </button>
+
+          {/* Login Link */}
+          <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
+            <p style={{ color: '#38007F', fontSize: '0.875rem' }}>
+              Already have an account?{' '}
+              <Link 
+                href="/login" 
+                style={{ 
+                  color: '#FFC500', 
+                  fontWeight: 600, 
+                  textDecoration: 'none' 
+                }}
+              >
+                Log In
+              </Link>
+            </p>
+          </div>
         </div>
       </form>
 
