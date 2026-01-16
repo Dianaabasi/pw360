@@ -46,7 +46,7 @@ export default function LandingPage() {
 
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: '#F0F5FF', fontFamily: 'system-ui, -apple-system, sans-serif' }}>
+    <div style={{ minHeight: '100vh', backgroundColor: '#F0F5FF', fontFamily: "'Satoshi', system-ui, -apple-system, sans-serif" }}>
       <Navbar />
 
       {/* Hero Section */}

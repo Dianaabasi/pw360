@@ -14,7 +14,7 @@ export default function LoginPage() {
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         position: 'relative',
-        fontFamily: 'system-ui, -apple-system, sans-serif',
+        fontFamily: "'Satoshi', system-ui, -apple-system, sans-serif",
         overflow: 'hidden'
       }}
     >

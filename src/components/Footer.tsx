@@ -279,7 +279,7 @@ export default function Footer() {
             fontSize: '0.875rem',
             color: '#6B7280'
           }}>
-            © 2025 PW360. Built for the Next Billion.
+            © 2026 PW360. Built for the Next Billion.
           </p>
         </div>
       </div>
