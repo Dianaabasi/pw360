@@ -22,7 +22,7 @@ export default function LoginForm() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      router.push('/dashboard/home');
+      router.push('/onboarding');
     } catch (err: any) {
       setError('Invalid email or password.');
     } finally {

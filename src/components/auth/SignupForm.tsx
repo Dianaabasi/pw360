@@ -51,7 +51,7 @@ export default function SignupForm() {
       });
 
       if (!res.ok) throw new Error('Failed to sync user data');
-      router.push('/dashboard/home');
+      router.push('/onboarding');
 
     } catch (err: any) {
       console.error(err);
@@ -310,12 +310,12 @@ export default function SignupForm() {
           <div style={{ marginTop: '1.5rem', textAlign: 'center' }}>
             <p style={{ color: '#38007F', fontSize: '0.875rem' }}>
               Already have an account?{' '}
-              <Link 
-                href="/login" 
-                style={{ 
-                  color: '#FFC500', 
-                  fontWeight: 600, 
-                  textDecoration: 'none' 
+              <Link
+                href="/login"
+                style={{
+                  color: '#FFC500',
+                  fontWeight: 600,
+                  textDecoration: 'none'
                 }}
               >
                 Log In
